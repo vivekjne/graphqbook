@@ -8,6 +8,7 @@
     "client:build": "webpack --config webpack.client.build.config.js",
     "stats": "webpack --profile --json --config webpack.client.build.config.js > stats.json",
     "analyze": "webpack-bundle-analyzer stats.json",
+    "server": "nodemon --exec babel-node --watch src/server src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,12 +22,15 @@
   },
   "homepage": "https://github.com/vivekjne/graphqbook#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
     "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
